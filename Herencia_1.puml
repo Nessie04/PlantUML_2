@@ -1,0 +1,7 @@
+@startuml
+
+
+Agente -right-> (Enviar solicitud de credito)
+(Enviar solicitud de credito personal) -up-|> (Enviar solicitud de credito)
+(Enviar solicitud de credito empresarial) -up-|> (Enviar solicitud de credito)
+@enduml
