@@ -1,0 +1,17 @@
+@startuml
+
+left to right direction
+Empleado -- (Alta cliente)
+Empleado -- (Introducir pedido)
+Empleado -- (Obtener estado pedido)
+Empleado -- (Buscar pedido)
+Empleado -- (Cancelar pedido)
+(Alta cliente) ..|> (Introducir pedido) : extiende
+(Introducir pedido) ..|> (Buscar cliente) : incluye
+(Introducir pedido) <|.. (Pago con tarjeta) : extiende
+(Introducir pedido) <|.. (Pago en cuenta) : extiende
+(Obtener estado pedido) ..|> (Buscar pedido) : incluye
+(Cancelar pedido) ..|> (Buscar pedido) : incluye
+
+
+@enduml
