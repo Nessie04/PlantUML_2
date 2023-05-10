@@ -1,0 +1,7 @@
+@startuml
+
+left to right direction
+Bibliotecario --> (Baja socio)
+(Baja socio) ..> (Buscar socio) : <<include>>
+
+@enduml
