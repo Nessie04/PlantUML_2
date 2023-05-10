@@ -1,22 +1,17 @@
 @startuml
-'https://plantuml.com/use-case-diagram
 
-:Main Admin: as Admin
-(Use the application) as (Use)
+left to right direction
+rectangle Biblioteca{
+usecase "Reservar libro"
+usecase "Prestar libro"
+usecase "Devolver libro"
+usecase "Actualizar catálogo"
+}
 
-User -> (Start)
-User --> (Use)
+Socio -- (Reservar libro)
+Socio -- (Prestar libro)
+(Prestar libro) -- Bibliotecario
+Socio -- (Devolver libro)
+(Actualizar catálogo) -- Bibliotecario
 
-Admin ---> (Use)
-
-note right of Admin : This is an example.
-
-note right of (Use)
-A note can also
-be on several lines
-end note
-
-note "This note is connected\nto several objects." as N2
-(Start) .. N2
-N2 .. (Use)
 @enduml
