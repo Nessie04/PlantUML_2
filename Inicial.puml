@@ -1,0 +1,25 @@
+@startuml
+
+left to right direction
+rectangle EmpresaPedidos {
+usecase "Introducir pedido"
+usecase "Cancelar pedido"
+usecase "Obtener estado pedido"
+usecase "Nuevo producto"
+usecase "Borrar producto"
+usecase "Borrar pedido"
+usecase "Buscar pedido"
+usecase "Alta cliente"
+usecase "Buscar cliente"
+}
+Empleado -- (Introducir pedido)
+Empleado -- (Cancelar pedido)
+Empleado -- (Obtener estado pedido)
+(Nuevo producto) -- Administrador
+(Borrar producto) -- Administrador
+Empleado -- (Borrar pedido)
+Empleado -- (Buscar pedido)
+Empleado -- (Alta cliente)
+Empleado -- (Buscar cliente)
+
+@enduml
